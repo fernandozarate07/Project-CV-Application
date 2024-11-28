@@ -39,3 +39,7 @@
   color: var();
   color: var(--black-charcoal);
 }
+h1 {
+  font-size: 2rem;
+  color: var(--black-charcoal);
+}
