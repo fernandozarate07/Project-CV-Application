@@ -1,13 +1,11 @@
 import { useState } from "react";
 
 function OptionsBar({ setActiveSection }) {
-  // Estado para manejar la pestaña activa
   const [activeTab, setActiveTab] = useState("data");
 
-  // Función para cambiar de pestaña
   function handleTabClick(section) {
-    setActiveTab(section); // Cambia el estado local
-    setActiveSection(section); // Notifica al componente padre
+    setActiveTab(section);
+    setActiveSection(section);
   }
 
   return (
