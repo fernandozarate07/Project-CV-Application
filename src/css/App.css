@@ -1,0 +1,41 @@
+.app__container {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10vw 1fr 2fr;
+  gap: 10px;
+}
+.optionBar__container {
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  background-color: var(--white);
+  border-radius: 10px;
+}
+.optionBar__button {
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+.active {
+  background-color: var(--background-green-soft);
+  color: var(--white);
+}
+.inactive {
+  background-color: transparent;
+  color: var();
+  color: var(--black-charcoal);
+}

@@ -1,4 +1,23 @@
-h1 {
-  color: black;
-  font-size: 2rem;
+:root {
+  --background-green-soft: #81c784;
+
+  --white: #ffffff;
+  --black-charcoal: #333333;
+
+  --red-delete: #e74c3c;
+  --green-load: #2ecc71;
+
+  --primary-color: #388e3c;
+}
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: var(--background-green-soft);
 }
