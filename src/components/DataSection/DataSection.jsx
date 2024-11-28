@@ -1,4 +1,10 @@
+import PersonalDetails from "./PersonalDetails";
+
 function DataSection() {
-  return <h1>data section</h1>;
+  return (
+    <div className="dataSection">
+      <PersonalDetails />
+    </div>
+  );
 }
 export default DataSection;
