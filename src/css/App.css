@@ -116,6 +116,67 @@
 
   border-radius: 5px;
 }
+.personalDEtails__textArea {
+  padding: 10px;
+  width: 100%;
+  height: 150px;
+
+  resize: none;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  overflow: scroll;
+}
+.photo__container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.photo__content {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.photo__inputContainer {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.photo__button {
+  padding: 10px;
+  background-color: var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.photo__romoveButton {
+  padding: 10px 15px;
+}
+.photo__imagePreview {
+  margin: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--black-charcoal);
+  border-radius: 50%;
+  width: 100px;
+  height: 80px;
+}
+.photo__imagePreview img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
 .experienceEducation__container {
   padding: 10px;
   width: 100%;

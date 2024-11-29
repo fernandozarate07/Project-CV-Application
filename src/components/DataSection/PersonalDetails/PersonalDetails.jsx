@@ -1,3 +1,5 @@
+import Photo from "./PhotoPerfil";
+
 const PersonalDetails = () => {
   return (
     <div className="personalDetails__container">
@@ -19,6 +21,14 @@ const PersonalDetails = () => {
           <strong>Adress</strong>
           <input type="text" placeholder="344 Maple Street, Apt 56, New York" />
         </div>
+        <div className="personalDetails__inputContainer">
+          <strong>Profile</strong>
+          <textarea
+            className="personalDEtails__textArea"
+            placeholder="Tell us a little about yourself, your interests, or your professional experience..."
+          />
+        </div>
+        <Photo />
       </div>
     </div>
   );

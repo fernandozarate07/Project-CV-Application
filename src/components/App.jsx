@@ -12,7 +12,7 @@ function App() {
     <div className="app__container">
       <main className="app__main">
         {/* CVPreviewSection */}
-        <div className="cv">
+        <div className="app__cvPreview">
           <h1>CV</h1>
         </div>
         <div className="app__controlPanel">
