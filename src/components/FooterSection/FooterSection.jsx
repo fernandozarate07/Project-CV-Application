@@ -1,6 +1,7 @@
 function FooterSection() {
   return (
     <footer className="footer__Container">
+      <p className="footer__content">&copy; Fernando Zárate {new Date().getFullYear()}</p>
       <div className="footer__links">
         <a
           href="https://github.com/fernandozarate07"
@@ -17,7 +18,6 @@ function FooterSection() {
           <i className="fa-brands fa-instagram"></i>
         </a>
       </div>
-      <p className="footer__content">&copy; Fernando Zárate {new Date().getFullYear()}. All rights reserved.</p>
     </footer>
   );
 }

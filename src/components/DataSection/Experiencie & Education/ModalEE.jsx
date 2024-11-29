@@ -1,4 +1,4 @@
-const ModalEE = ({ isOpen, onClose, onSubmit, questionOne, questionTwo, questionThree }) => {
+const ModalEE = ({ isOpen, onClose, onSubmit, question, placeHolder }) => {
   if (!isOpen) return null;
 
   let title = "";
@@ -17,16 +17,20 @@ const ModalEE = ({ isOpen, onClose, onSubmit, questionOne, questionTwo, question
     <div className="modal__container">
       <div className="modal__content">
         <div className="modal__question">
-          <h3>{questionOne}</h3>
-          <input type="text" onChange={(e) => (title = e.target.value)} />
+          <strong>{question.questionOne}</strong>
+          <input type="text" onChange={(e) => (title = e.target.value)} placeholder={placeHolder.placeHolderOne} />
         </div>
         <div className="modal__question">
-          <h3>{questionTwo}</h3>
-          <input type="text" onChange={(e) => (institution = e.target.value)} />
+          <strong>{question.questionTwo}</strong>
+          <input
+            type="text"
+            onChange={(e) => (institution = e.target.value)}
+            placeholder={placeHolder.placeHolderTwo}
+          />
         </div>
         <div className="modal__question">
-          <h3>{questionThree}</h3>
-          <input type="text" onChange={(e) => (date = e.target.value)} />
+          <strong>{question.questionThree}</strong>
+          <input type="text" onChange={(e) => (date = e.target.value)} placeholder={placeHolder.placeHolderThree} />
         </div>
       </div>
       <div className="modal__actions">

@@ -4,20 +4,20 @@ const PersonalDetails = () => {
       <h1>Personal Dates</h1>
       <div className="personalDetails__content">
         <div className="personalDetails__inputContainer">
-          <h3>Full Name</h3>
-          <input type="text" />
+          <strong>Full Name</strong>
+          <input type="text" placeholder="Michael Johnson" />
         </div>
         <div className="personalDetails__inputContainer">
-          <h3>Email</h3>
-          <input type="text" />
+          <strong>Email</strong>
+          <input type="text" placeholder="michael.johnson1985@gmail.com" />
         </div>
         <div className="personalDetails__inputContainer">
-          <h3>Phone Number</h3>
-          <input type="text" />
+          <strong>Phone Number</strong>
+          <input type="text" placeholder="(212) xxx-xxxx" />
         </div>
         <div className="personalDetails__inputContainer">
-          <h3>Adress</h3>
-          <input type="text" />
+          <strong>Adress</strong>
+          <input type="text" placeholder="344 Maple Street, Apt 56, New York" />
         </div>
       </div>
     </div>

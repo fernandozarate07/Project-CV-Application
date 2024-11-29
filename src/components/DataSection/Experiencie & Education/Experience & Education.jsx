@@ -1,9 +1,10 @@
 import { useState } from "react";
 import ModalEE from "./ModalEE";
+import InfoCard from "./InfoCard";
 
-const ExperienceEducation = ({ name, questions }) => {
+const ExperienceEducation = ({ name, questions, statements, placeHolder }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [cards, setCards] = useState([]); // Estado para manejar las tarjetas
+  const [cards, setCards] = useState([]);
 
   const handleAddCard = (data) => {
     const newCard = {
@@ -15,6 +16,9 @@ const ExperienceEducation = ({ name, questions }) => {
     setCards([...cards, newCard]);
     setIsModalOpen(false);
   };
+  const handleRemoveCard = (id) => {
+    setCards(cards.filter((card) => id !== card.id));
+  };
 
   return (
     <div className="experienceEducation__container">
@@ -24,37 +28,20 @@ const ExperienceEducation = ({ name, questions }) => {
           <i className="fa-solid fa-plus" />
         </button>
       </div>
-
       {/* Solo renderiza experienceEducation__content si hay al menos una tarjeta */}
       {cards.length > 0 && (
         <div className="experienceEducation__content">
           {cards.map((card) => (
-            <div key={card.id} className="infoCard__container">
-              <div className="infoCard__content">
-                <h3>{card.title}</h3>
-                <p>{card.institution}</p>
-                <p>{card.date}</p>
-              </div>
-              <div className="infoCard__options">
-                <button>
-                  <i className="fa-solid fa-eye" />
-                </button>
-                <button>
-                  <i className="fa-solid fa-trash" />
-                </button>
-              </div>
-            </div>
+            <InfoCard key={card.id} card={card} statements={statements} removeCard={handleRemoveCard} />
           ))}
         </div>
       )}
-
       <ModalEE
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onSubmit={handleAddCard}
-        questionOne={questions.questionOne}
-        questionTwo={questions.questionTwo}
-        questionThree={questions.questionThree}
+        question={questions}
+        placeHolder={placeHolder}
       />
     </div>
   );

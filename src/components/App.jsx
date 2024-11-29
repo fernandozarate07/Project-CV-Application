@@ -12,7 +12,9 @@ function App() {
     <div className="app__container">
       <main className="app__main">
         {/* CVPreviewSection */}
-        <h1>Aca iria el CV</h1>
+        <div className="cv">
+          <h1>CV</h1>
+        </div>
         <div className="app__controlPanel">
           {/* optionBar & loadBar */}
           <div className="app__barContainer">
