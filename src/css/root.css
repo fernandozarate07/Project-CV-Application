@@ -26,6 +26,11 @@ button,
 a {
   color: var(--black-charcoal);
 }
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
 #root {
   background-color: var(--background-grey-soft);
 }

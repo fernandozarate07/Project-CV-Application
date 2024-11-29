@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../css/App.css";
 import OptionsBar from "./OptionsBar/OptionsBar";
-import AppearanceSection from "./ appearanceSection/ appearanceSection";
+import AppearanceSection from "./ AppearanceSection/ appearanceSection";
 import DataSection from "./DataSection/DataSection";
 import FooterSection from "./FooterSection/FooterSection";
 import LoadBar from "./LoadBar/LoadBar";
@@ -16,8 +16,8 @@ function App() {
         <div className="app__controlPanel">
           {/* optionBar & loadBar */}
           <div className="app__barContainer">
-            <OptionsBar setActiveSection={setActiveSection} />
             <LoadBar />
+            <OptionsBar setActiveSection={setActiveSection} />
           </div>
           {/* sectionTab */}
           <div className="sectionTab__container">

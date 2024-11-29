@@ -38,19 +38,14 @@
 }
 .optionBar__button,
 .loadBar__button {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-
-  border: none;
-  border-radius: 10px;
-
-  cursor: pointer;
 }
 .active {
   background-color: var(--background-grey-soft);
@@ -58,10 +53,10 @@
 .inactive {
   background-color: transparent;
 }
-.clear {
+.red {
   color: var(--red-delete);
 }
-.load {
+.green {
   color: var(--green-load);
 }
 .sectionTab__container {
@@ -116,6 +111,99 @@
   border-radius: 5px;
   outline: none;
 }
+.experienceEducation__container {
+  padding: 10px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border-radius: 10px;
+  background-color: var(--white);
+}
+.experienceEducation__title {
+  display: flex;
+  justify-content: space-between;
+}
+.experienceEducation__title button {
+  padding: 10px 15px;
+}
+.experienceEducation__content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  background-color: var(--background-grey-soft);
+  border-radius: 10px;
+}
+.infoCard__container {
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  background-color: var(--white);
+  border-radius: 10px;
+}
+.infoCard__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.infoCard__options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.modal__container {
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+
+  background-color: var(--background-grey-soft);
+  border-radius: 10px;
+}
+.modal__content {
+  width: 100%;
+}
+.modal__question {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal__question input {
+  padding: 10px;
+  width: 100%;
+
+  border: none;
+  border-radius: 5px;
+  outline: none;
+
+  background-color: var(--white);
+}
+.modal__actions {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.modal__actions button {
+  padding: 10px;
+  background-color: var(--white);
+}
+
 /* footer */
 .footer__Container {
   display: flex;
