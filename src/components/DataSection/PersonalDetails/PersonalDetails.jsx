@@ -26,12 +26,20 @@ const PersonalDetails = ({ handlePushData, handleRemoveData, isLoad, isClear }) 
       // Solo guardamos los datos cuando isLoad es true y cuando los datos han cambiado
       handlePushData("personalDetails", formData);
     }
-  }, [isLoad]); // Solo se dispara cuando isLoad cambia
+  }, [isLoad, formData]); // Añadido formData para garantizar que siempre se guarda la información más reciente
 
   // Limpiar los datos cuando isClear es true
   useEffect(() => {
     if (isClear) {
-      handleRemoveData();
+      // Limpiar tanto el estado del formulario como los datos enviados
+      setFormData({
+        fullName: "",
+        email: "",
+        phoneNumber: "",
+        address: "",
+        profile: "",
+      });
+      handleRemoveData(); // Llamamos a handleRemoveData para eliminar los datos globales si es necesario
     }
   }, [isClear]); // Solo limpia cuando isClear es true
 
