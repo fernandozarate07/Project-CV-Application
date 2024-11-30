@@ -1,10 +1,15 @@
 import PersonalDetails from "./PersonalDetails/PersonalDetails";
 import ExperienceEducation from "./Experiencie & Education/Experience & Education";
 
-function DataSection() {
+function DataSection({ handlePushData, handleRemoveData, isLoad, isClear }) {
   return (
     <div className="dataSection">
-      <PersonalDetails />
+      <PersonalDetails
+        handlePushData={handlePushData}
+        handleRemoveData={handleRemoveData}
+        isLoad={isLoad}
+        isClear={isClear}
+      />
       <ExperienceEducation
         name="Education"
         questions={{
@@ -22,6 +27,10 @@ function DataSection() {
           placeHolderTwo: "Bachelor of Science in Digital Innovation",
           placeHolderThree: "2016 / 2021",
         }}
+        handlePushData={handlePushData}
+        handleRemoveData={handleRemoveData}
+        isLoad={isLoad}
+        isClear={isClear}
       />
       <ExperienceEducation
         name="Experience"
@@ -40,6 +49,10 @@ function DataSection() {
           placeHolderTwo: "Chief Innovation Officer (CIO)",
           placeHolderThree: "2022 / Present",
         }}
+        handlePushData={handlePushData}
+        handleRemoveData={handleRemoveData}
+        isLoad={isLoad}
+        isClear={isClear}
       />
     </div>
   );

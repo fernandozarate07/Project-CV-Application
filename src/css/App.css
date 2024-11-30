@@ -1,5 +1,6 @@
 /* app */
 .app__container {
+  padding-inline: 5vw;
   width: 100%;
   min-height: 100vh;
   display: grid;
@@ -12,17 +13,73 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1.5fr;
   gap: 10px;
 }
-.cv {
+/* cv */
+.app__cvPreview {
+  max-height: 120vh;
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  gap: 20px;
 
   background-color: var(--background-grey-soft);
   border-radius: 10px;
 }
+.nameApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+}
+.nameApp span {
+  font-size: 0.8rem;
+}
+.cvOne__container {
+  height: 842px;
+  width: 595px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  background-color: var(--white);
+}
+.cvOne__leftSectionContent {
+  display: grid;
+  grid-template-rows: repeat(4fr);
+
+  background-color: var(--primary-color);
+}
+.cvOne__leftSectionContent p,
+.cvOne__leftSectionContent h3 {
+  color: var(--white);
+}
+.lft-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lft-section h3 {
+  border-bottom: 1px solid var(--white);
+  padding-bottom: 10px;
+}
+.cvOne__photoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cvOne__photo {
+  width: 150px;
+  height: 150px;
+
+  background-color: var(--white);
+  border-radius: 50%;
+}
+/* Control Panel */
 .app__controlPanel {
   display: flex;
   flex-direction: column;
@@ -36,9 +93,12 @@
 /* optionBar & loadBar*/
 .optionBar__container,
 .loadBar__container {
+  width: 45%;
   padding: 10px;
 
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   gap: 10px;
 
   background-color: var(--background-grey-soft);
@@ -63,9 +123,21 @@
 }
 .red {
   color: var(--red-delete);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.red:hover {
+  background-color: var(--red-delete);
+  color: var(--white);
+  border: none;
 }
 .green {
   color: var(--green-load);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.green:hover {
+  background-color: var(--green-load);
+  color: var(--white);
+  border: none;
 }
 .sectionTab__container {
   display: flex;
@@ -134,6 +206,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 5px;
 }
 .photo__content {
   width: 100%;
@@ -143,9 +216,6 @@
   align-items: center;
 }
 .photo__inputContainer {
-  width: 100%;
-  height: auto;
-
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -153,12 +223,16 @@
 }
 .photo__button {
   padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--white);
   border-radius: 10px;
   cursor: pointer;
 }
 .photo__romoveButton {
-  padding: 10px 15px;
+  padding: 10px 12px;
 }
 .photo__imagePreview {
   margin: 10px;
@@ -167,10 +241,10 @@
   justify-content: center;
   align-items: center;
 
-  background-color: var(--black-charcoal);
+  background-color: var(--white);
   border-radius: 50%;
-  width: 100px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
 }
 .photo__imagePreview img {
   width: 100%;
@@ -193,8 +267,7 @@
   justify-content: space-between;
 }
 .experienceEducation__title button {
-  padding: 10px 15px;
-  background-color: var(--white);
+  padding: 10px 12px;
 }
 .experienceEducation__content {
   padding-block: 10px;
@@ -223,8 +296,7 @@
   justify-content: space-around;
 }
 .infoCard__options button {
-  padding: 10px;
-  background-color: var(--background-grey-soft);
+  padding: 10px 12px;
 }
 .modal__container {
   width: 100%;

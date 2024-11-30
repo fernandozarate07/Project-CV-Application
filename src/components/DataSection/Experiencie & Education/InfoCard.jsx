@@ -15,10 +15,10 @@ const InfoCard = ({ card, statements, removeCard }) => (
       </p>
     </div>
     <div className="infoCard__options">
-      <button>
+      <button className="green">
         <i className="fa-solid fa-eye" />
       </button>
-      <button onClick={() => removeCard(card.id)}>
+      <button className="red" onClick={() => removeCard(card.id)}>
         <i className="fa-solid fa-trash" />
       </button>
     </div>

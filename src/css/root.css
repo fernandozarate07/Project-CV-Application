@@ -7,7 +7,7 @@
   --red-delete: #e74c3c;
   --green-load: #16a085;
 
-  --primary-color: #0984e3;
+  --primary-color: #2c3e50;
 }
 
 /* Reset CSS */
@@ -32,6 +32,12 @@ button {
   border: none;
   border-radius: 10px;
   background-color: var(--white);
+  transition: border 0.1s ease;
+}
+button:hover {
+  color: var(--white);
+  background-color: var(--primary-color);
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 input {
   border: none;
